@@ -99,7 +99,7 @@ public class Craft {
             }
         }
         CalcMessageBuilder messageBuilder = new CalcMessageBuilder()
-                .addFromArray(new String[] {"Ingredients to craft ", "input", " ", "input", ": \n"}, new String[] {nf.format(inputAmount), item.getOutput().getName().getString()}, new String[] {});
+                .addFromArray(new String[] {"Ингридиенты для крафта ", "input", " ", "input", ": \n"}, new String[] {nf.format(inputAmount), item.getOutput().getName().getString()}, new String[] {});
         
         for (Map.Entry<String, Integer> entry : ingredients.entrySet()) {
             String key = entry.getKey();
@@ -114,13 +114,13 @@ public class Craft {
             String items = nf.format(remainder);
             if (sb > 0) {
                 messageBuilder.addString(key+": ");
-                messageBuilder.addResult("SBs: "+sbString + ", Stacks: "+stacksString+", Items: "+items+"\n");
+                messageBuilder.addResult("SBs: "+sbString + ", Стаки: "+stacksString+", Предметы: "+items+"\n");
             } else if (stacks > 0) {
                 messageBuilder.addString(key + ": " );
-                messageBuilder.addResult("Stacks: "+stacksString+", Items: "+items+"\n");
+                messageBuilder.addResult("Стаки: "+stacksString+", Предметы: "+items+"\n");
             } else {
                 messageBuilder.addString(key + ": " );
-                messageBuilder.addResult("Items: "+items+"\n");
+                messageBuilder.addResult("Предметы: "+items+"\n");
             }
         }
 
@@ -131,8 +131,8 @@ public class Craft {
 
     public static String helpMessage = """
         §b§LCraft:§r§f
-        Given a desired item and the quantity to be crafted §7§o(can be in expression form)§r§f, returns the amounts of the items needed to craft the amount of the desired item.
-            §eUsage: /calc craft <item> <amount>§f
+        Задаём желаемый предмет и его количество §7§o(может быть представлена в виде выражения)§r§f, получаем количество предметов, необходимых для крафта нужного количества предметовю
+            §eИспользование: /calc craft <item> <amount>§f
             """;
     
 }
