@@ -114,7 +114,7 @@ public class Craft {
             String items = nf.format(remainder);
             if (sb > 0) {
                 messageBuilder.addString(key+": ");
-                messageBuilder.addResult("SBs: "+sbString + ", Стаки: "+stacksString+", Предметы: "+items+"\n");
+                messageBuilder.addResult("Шалкера: "+sbString + ", Стаки: "+stacksString+", Предметы: "+items+"\n");
             } else if (stacks > 0) {
                 messageBuilder.addString(key + ": " );
                 messageBuilder.addResult("Стаки: "+stacksString+", Предметы: "+items+"\n");
@@ -130,8 +130,8 @@ public class Craft {
     }
 
     public static String helpMessage = """
-        §b§LCraft:§r§f
-        Задаём желаемый предмет и его количество §7§o(может быть представлена в виде выражения)§r§f, получаем количество предметов, необходимых для крафта нужного количества предметовю
+        §b§LКрафт:§r§f
+        При заданном предмете и его количестве §7§o(может быть представлена в виде выражения)§r§f, получаем количество предметов, необходимых для крафта нужного количества заданного предмета
             §eИспользование: /calc craft <item> <amount>§f
             """;
     
