@@ -88,8 +88,8 @@ public class ItemToStack {
     }
 
     public static String helpMessage = """
-        §b§LItem to Stack:§r§f
-            Given a number of items §7§o(can be in expression form)§r§f, returns the number of stacks and remainder items.
-            §eUsage: /calc itemtostack <numberofitems>§f
+        §b§LПредметы в стаки:§r§f
+            При заданном количестве предметов §7§o(может быть представлено в виде выражения)§r§f, получаем количество стаков + остаток предметов.
+            §eИспользование: /calc itemtostack <количество предметов>§f
                 """;
 }
