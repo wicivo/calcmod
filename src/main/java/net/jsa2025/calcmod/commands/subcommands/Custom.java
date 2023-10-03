@@ -57,9 +57,9 @@ public class Custom {
                                         saveNewCommand(name, function);
                                         messageBuilder = new CalcMessageBuilder("§eAdded "+name+"§f");
                                     } else if (parseEquationVariables(function).isEmpty()) {
-                                        messageBuilder = new CalcMessageBuilder("§cMust have at least one parameter.§f");
+                                        messageBuilder = new CalcMessageBuilder("§cДолжен иметь хотя бы один параметр.§f");
                                     }else {
-                                        messageBuilder = new CalcMessageBuilder("§cCannot have numbers in command name.§f");
+                                        messageBuilder = new CalcMessageBuilder("§cВ названии команды не может быть цифр.§f");
                                     }
 
                                     CalcCommand.sendMessage(ctx.getSource(), messageBuilder);
@@ -117,9 +117,9 @@ public class Custom {
                                                 saveNewCommand(name, function);
                                                 messageBuilder = new CalcMessageBuilder("§eAdded "+name+"§f");
                                             } else if (parseEquationVariables(function).isEmpty()) {
-                                                messageBuilder = new CalcMessageBuilder("§cMust have at least one parameter.§f");
+                                                messageBuilder = new CalcMessageBuilder("§cДолжен иметь хотя бы один параметр.§f");
                                             }else {
-                                                messageBuilder = new CalcMessageBuilder("§cCannot have numbers in command name.§f");
+                                                messageBuilder = new CalcMessageBuilder("§cВ названии команды не может быть цифр.§f");
                                             }
 
 
@@ -264,13 +264,13 @@ public class Custom {
 
     public static String helpMessage = """
             §b§LCustom:§r§f
-                Custom functions are reusable commands that perform a specific computation. They can be run in any number field formatted with the function name and the parameters in parenthesis §7§o(customfunction(param1, paramN))§r§f.
-                Custom functions can have any number of parameters, specified in [square] brackets when adding the function.
-                §eUsage: /calc custom add <name> <function>§f
-                §eUsage: /calc custom run <name> <input>§f
-                §eUsage: /calc <name>(<parameters>)§f
-                §eUsage: /calc custom list§f
-                §eUsage: /calc custom remove <name>§f
+                Пользовательские функции - это многократно используемые команды, выполняющие определенные вычисления. Они могут выполняться в любом числовом поле в формате с именем функции и параметрами в круглых скобках §7§o(customfunction(param1, paramN))§r§f.
+                Пользовательские функции могут иметь любое количество параметров, указываемых в [квадратных] скобках при добавлении функции.
+                §eИспользование: /calc custom add <название> <function>§f
+                §eИспользование: /calc custom run <название> <input>§f
+                §eИспользование: /calc <название>(<parameters>)§f
+                §eИспользование: /calc custom list§f
+                §eИспользование: /calc custom remove <название>§f
                     """;
 
 }
