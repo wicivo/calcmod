@@ -221,7 +221,7 @@ public class CalcCommand {
         }
         messageText.append(Text.literal(" "));
 
-        source.sendMessage(messageText.append(Text.literal("§7[Click to Copy]§f").setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, m.replaceAll("§a", "").replaceAll("§f", ""))))));
+        source.sendMessage(messageText.append(Text.literal("§7[Нажмите чтобы скопировать]§f").setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, m.replaceAll("§a", "").replaceAll("§f", ""))))));
     }
     
     public static void sendMessageServer(ServerCommandSource source, CalcMessageBuilder messageBuilder) {
