@@ -81,14 +81,14 @@ public class SbToItem {
     public static CalcMessageBuilder execute(Entity player, String numberofsbs, int stackSize) {
         double sbs = CalcCommand.getParsedExpression(player, numberofsbs, stackSize);
         double items = sbs * stackSize * 27;
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"input", " SBs = ", "result", " Items"}, new String [] {numberofsbs}, new String[] {nf.format(items)});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"input", " Шалкеров = ", "result", " Предметов"}, new String [] {numberofsbs}, new String[] {nf.format(items)});
         return message;
     }
 
     public static String helpMessage = """
-        §b§LSb to Item:§r§f
-            Given a number of full Shulker Boxes §7§o(can be in expression form)§r§f, returns the number of items.
-            §eUsage: /calc sbtoitem <numberofsbs>§f
+        §b§LКол-во шалкеров в предметы:§r§f
+            При заданном количестве шалкеров §7§o(can be in expression form)§r§f, получаем количество предметов.
+            §eИспользование: /calc sbtoitem <numberofsbs>§f
                 """;
     
 }
