@@ -62,13 +62,13 @@ public class Rates {
         double timeDouble = CalcCommand.getParsedExpression(player, time);
         double itemspersecond = items / timeDouble;
         double rates = itemspersecond * 3600;
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"input", " Items in ", "input", " Seconds = ", "result", "/hr"}, new String[] {numberofitems, time}, new String[] {nf.format(rates)});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"input", " Предметов в ", "input", " Секунд = ", "result", "/час"}, new String[] {numberofitems, time}, new String[] {nf.format(rates)});
         return message;
     }
 
     public static String helpMessage = """
-        §b§LRates:§r§f
-            Given a number of items and afk time in seconds §7§o(can be in expression form)§r§f, returns the number of items per hour.
-            §eUsage: /calc rates <numberofitems> <time>§f
+        §b§LСкорость:§r§f
+            При заданном количестве предметов и времени афк в секундах §7§o(can be in expression form)§r§f, получаем количество предметов в час.
+            §eИспользование: /calc rates <количество предметов> <время>§f
                 """;
 }
