@@ -80,13 +80,13 @@ public class StackToItem {
     public static CalcMessageBuilder execute(Entity player, String numberofstacks, int stackSize) {
         double stacks = CalcCommand.getParsedExpression(player, numberofstacks, 1);
         double items = stacks * stackSize;
-        return new CalcMessageBuilder().addInput(numberofstacks).addString(" ").addInput(nf.format(stackSize)).addString(" Stacks = ").addResult(nf.format(items)).addString(" Items");
+        return new CalcMessageBuilder().addInput(numberofstacks).addString(" ").addInput(nf.format(stackSize)).addString(" Стаков = ").addResult(nf.format(items)).addString(" Предметов");
     }
 
     public static String helpMessage = """
-        §b§LStack to Item:§r§f
-            Given a number of stacks §7§o(can be in expression form)§r§f, returns the number of items.
-            §eUsage: /calc stacktoitem <numberofstacks>§f
+        §b§LСтаки в кол-во предметов:§r§f
+            При заданном количестве стаков §7§o(может быть представлено в виде выражения)§r§f, получаем количество предметов.
+            §eИспользование: /calc stacktoitem <numberofstacks>§f
                 """;
     
 }
