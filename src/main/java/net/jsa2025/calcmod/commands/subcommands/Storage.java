@@ -83,15 +83,15 @@ public class Storage {
         double hopperSpeed = (9000*timesHopperSpeed);
         double sorters = Math.ceil(rates/hopperSpeed);
         double sbsperhour = rates * 1.0 / 1728;
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Required ","input","xHopper speed §7(9,000/hr)§f sorters for ", "input"," items/hr = ", "result", " \nSBs/hr = ", "result"}, new String[] {nf.format(timesHopperSpeed), itemsperhour}, new String[] {nf.format(sorters), nf.format(sbsperhour)});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Необходимое кол-во воронок со скоростью ","input","x §7(9,000/ч)§f для сортировки ", "input"," предметов/ч = ", "result", " \nSBs/hr = ", "result"}, new String[] {nf.format(timesHopperSpeed), itemsperhour}, new String[] {nf.format(sorters), nf.format(sbsperhour)});
         
         return message;
     }
 
     public static String helpMessage = """
-        §b§LStorage:§r§f
-        Calculates the number of needed item sorters given a rate of items per hour §7§o(can be in expression form)§r§f. Additional input for multiple times hopper speed sorters.
-                §eUsage: /calc storage <itemsperhour>
-                Usage: /calc storage <timesHopperSpeed> <itemsperhour>§f
+        §b§LХранилище:§r§f
+        Рассчитывает необходимое количество воронок при заданной скорости сортировки §7§o(can be in expression form)§r§f. Additional input for multiple times hopper speed sorters.
+                §eИспользование: /calc storage <itemsperhour>
+                Использование: /calc storage <timesHopperSpeed> <itemsperhour>§f
                 """;
 }
