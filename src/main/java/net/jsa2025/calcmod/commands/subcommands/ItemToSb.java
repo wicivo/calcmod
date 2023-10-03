@@ -80,7 +80,7 @@ public class ItemToSb {
     public static CalcMessageBuilder execute(Entity player, String numberofitems, int stackSize) {
         double items = CalcCommand.getParsedExpression(player, numberofitems, stackSize);
         double sbs = items / (stackSize * 27);
-        CalcMessageBuilder message= new CalcMessageBuilder().addInput(numberofitems).addString(" Items = ").addResult(nf.format(sbs)).addString(" SBs");
+        CalcMessageBuilder message= new CalcMessageBuilder().addInput(numberofitems).addString(" Предметов = ").addResult(nf.format(sbs)).addString(" Шалкеров");
 
         return message;
     }
