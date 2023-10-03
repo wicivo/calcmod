@@ -57,18 +57,18 @@ public class SecondsToHopperClock {
         double secondsDouble = CalcCommand.getParsedExpression(player, seconds);
         double hopperclock = Math.ceil(secondsDouble *1.25);
         if (hopperclock > 320) {
-            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Items needed in hopper clock for ", "input"," seconds = ", "result", "result", " \n§cThis exceeds the maximum number of items in a hopper."}, new String[] {seconds}, new String[] {nf.format(hopperclock), " \nStacks: "+nf.format(Math.floor(hopperclock/64))+" Items: "+nf.format(hopperclock%64)});
+            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Необходимое кол-во предметов в таймере на воронках для ", "input"," секунд = ", "result", "result", " \n§cЭто превышает максимальное количество предметов в воронке."}, new String[] {seconds}, new String[] {nf.format(hopperclock), " \nStacks: "+nf.format(Math.floor(hopperclock/64))+" Items: "+nf.format(hopperclock%64)});
             return message;
         } else {
-            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Items needed in hopper clock for ", "input"," seconds = ", "result", "result"}, new String[] {seconds}, new String[] {nf.format(hopperclock), " \nStacks: "+nf.format(Math.floor(hopperclock/64))+" Items: "+nf.format(hopperclock%64)});
+            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Необходимое кол-во предметов в таймере на воронках для ", "input"," секунд = ", "result", "result"}, new String[] {seconds}, new String[] {nf.format(hopperclock), " \nStacks: "+nf.format(Math.floor(hopperclock/64))+" Items: "+nf.format(hopperclock%64)});
         return message;
         }
     }
 
     public static String helpMessage = """
-        §b§LSeconds to Hopper Clock:§r§f
-            Given a number of seconds §7§o(can be in expression form)§r§f, returns the number of items needed in a hopper clock to achieve that time.
-            §eUsage: /calc secondstohopperclock <seconds>§f
+        §b§LСекунды в кол-во предметов для таймера на воронках:§r§f
+            При заданном количестве секунд §7§o(может быть представлено в виде выражения)§r§f, получаем количество предметов для таймера на воронках.
+            §eИспользование: /calc secondstohopperclock <секунду>§f
                 """;
 
 }
