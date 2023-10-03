@@ -83,7 +83,7 @@ public class Piglin {
     public static CalcMessageBuilder executeToItems(Entity player, String gold, String item) {
 
         double amount_of_items = CalcCommand.getParsedExpression(player, gold)/CBarterSuggestionProvider.barter.get(item);
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Avg amount of ", "input", " that ", "input"," gold ingots will get = ","result"}, new String[] {item, gold}, new String[] {nf.format(amount_of_items)});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Среднее кол-во ", "input", " которое вы получите за ", "input"," золотых слитков = ","result"}, new String[] {item, gold}, new String[] {nf.format(amount_of_items)});
         return message;
 
 
@@ -91,16 +91,16 @@ public class Piglin {
     public static CalcMessageBuilder executeToGold(Entity player, String numberofitems, String item) {
 
         double amount_of_items = CalcCommand.getParsedExpression(player, numberofitems)*CBarterSuggestionProvider.barter.get(item);
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Avg gold ingots to get ", "input"," ","input"," = ", "result"}, new String[] {numberofitems, item}, new String[] {nf.format(amount_of_items)});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Среднее кол-во слитков для получения ", "input"," ","input"," = ", "result"}, new String[] {numberofitems, item}, new String[] {nf.format(amount_of_items)});
         return message;
 
 
     }
 
     public static String helpMessage = """
-            §b§LBarter:§r§f
-                Calculates the average amount of gold ingots to barter to get a number of a desired item §7§o(togold)§r§f, or the average amount of an item that will be recieved when bartering a number of gold ingots §7§o(toitem)§r§f.   
-                §eUsage: /calc barter togold <numberofitems> <item>§f
-                §eUsage: /calc barter toitem <amountofgold> <item>§f
+            §b§LОбмен:§r§f
+                Рассчитывает среднее количество золотых слитков, которое необходимо обменять для получения определенного количества желаемого предмета §7§o(togold)§r§f, или среднее количество предмета, которое будет получено при обмене определенного количества золотых слитков §7§o(toitem)§r§f.   
+                §eИспользование: /calc barter togold <кол-во предмета> <предмет>§f
+                §eИспользование: /calc barter toitem <кол-во золота> <предмет>§f
                     """;
 }
