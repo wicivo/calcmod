@@ -69,14 +69,14 @@ public class Overworld {
         position = pos[0];
 
 
-        CalcMessageBuilder message = new CalcMessageBuilder().addInput("X: "+nf.format(position.getX())+" Z: "+nf.format(position.getZ())).addString(" §7>>§f Overworld = ").addResult("X: "+nf.format(position.getX()*8)+" Z: "+nf.format(position.getZ()*8));
+        CalcMessageBuilder message = new CalcMessageBuilder().addInput("X: "+nf.format(position.getX())+" Z: "+nf.format(position.getZ())).addString(" §7>>§f Верхний мир = ").addResult("X: "+nf.format(position.getX()*8)+" Z: "+nf.format(position.getZ()*8));
         return message;
     }
 
     public static String helpMessage = """
-            §b§LOverworld:§r§f
-                Given a block position in the Nether, returns the Overworld's corresponding coordinates. If no coordinates are given, command assumes current player position.
-                §eUsage: /calc overworld <x> <y> <z>§f
+            §b§LВерхний мир:§r§f
+                При заданных координатах в Нижнем мире, получаем соответствующие координаты Верхнем мире. Если координаты не указаны, то команда принимает ваши текущии координаты.
+                §eИспользование: /calc overworld <x> <y> <z>§f
                     """;
 
 
