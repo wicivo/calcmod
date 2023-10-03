@@ -43,8 +43,7 @@ public class Variables {
 
     public static CalcMessageBuilder execute() {
         String message = """
-            §bVariables§f can be used inside equations in any number field. They act as shortcuts instead of having to remember that “a double chest full of 16 stackable items is 864.”
-            If no stack size is given, variables default to the stack size of each command.
+            §bПеременные§f могут использоваться внутри уравнений в любом числовом поле. Они служат для сокращения времени, вместо того чтобы запоминать, что двойной сундук, полный 16 стакабельными предметами, равен 864.
             
                 dub: 3456 (default)
                 dub64: 3456
