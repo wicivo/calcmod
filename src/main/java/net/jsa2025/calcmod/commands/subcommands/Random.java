@@ -70,12 +70,12 @@ public class Random {
         if (range.length == 1) {
         double maxInt = CalcCommand.getParsedExpression(player, range[0]);
         String random = nf.format(ThreadLocalRandom.current().nextInt(0, (int) maxInt + 1));
-        return new CalcMessageBuilder().addFromArray(new String[] { "Random number between 0 and ", "input", " §7(inclusive)§f = ", "result" }, range, new String[] {random});
+        return new CalcMessageBuilder().addFromArray(new String[] { "Случайное число между 0 и ", "input", " §7(включительно)§f = ", "result" }, range, new String[] {random});
         } else if (range.length == 2 ) {
             double max = CalcCommand.getParsedExpression(player, range[1]);
             double min = CalcCommand.getParsedExpression(player, range[0]);
             String random = nf.format(ThreadLocalRandom.current().nextInt((int) min, (int) max + 1));
-            return new CalcMessageBuilder().addFromArray(new String[] { "Random number between ", "input", " and ", "input", " §7(inclusive)§f = ", "result" }, range, new String[] {random});
+            return new CalcMessageBuilder().addFromArray(new String[] { "Случайное число между ", "input", " и ", "input", " §7(включительно)§f = ", "result" }, range, new String[] {random});
 
         }
         return new CalcMessageBuilder("Invalid Arguments");
