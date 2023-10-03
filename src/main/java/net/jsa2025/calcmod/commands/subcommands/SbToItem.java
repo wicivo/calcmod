@@ -87,8 +87,8 @@ public class SbToItem {
 
     public static String helpMessage = """
         §b§LКол-во шалкеров в предметы:§r§f
-            При заданном количестве шалкеров §7§o(can be in expression form)§r§f, получаем количество предметов.
-            §eИспользование: /calc sbtoitem <numberofsbs>§f
+            При заданном количестве шалкеров §7§o(может быть представлено в виде выражения)§r§f, получаем количество предметов.
+            §eИспользование: /calc sbtoitem <Кол-во шалкеров>§f
                 """;
     
 }
