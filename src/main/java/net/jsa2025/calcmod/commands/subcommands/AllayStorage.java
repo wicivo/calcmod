@@ -59,13 +59,13 @@ public class AllayStorage {
         double allaycooldown = 3;
         String allaystorage = nf.format(Math.ceil(ratesinsec/(1/allaycooldown)));
 
-        return new CalcMessageBuilder().addString("Allays needed to sort ").addInput(itemsperhour).addString(" items/hr = ").addResult(allaystorage);
+        return new CalcMessageBuilder().addString("Количество эллеев, нужное для сортировки ").addInput(itemsperhour).addString(" предметов/ч = ").addResult(allaystorage);
     }
 
     public static String helpMessage = """
-        §b§LAllay Storage:§r§f
-            Given the number of items per hour of a non stackable item §7§o(can be in expression form)§r§f, returns allays needed to sort the item.
-            §eUsage: /calc allaystorage <numberofitems>§f
+        §b§LКол-во эллеев для сортировки:§r§f
+            При заданном количестве нестакабельных предметов в час §7§o(может быть представлено в виде выражения)§r§f, получаем нужное количество эллеев для сортировки.
+            §eИспользование: /calc allaystorage <Количество предметов§f
             """;
 
 
