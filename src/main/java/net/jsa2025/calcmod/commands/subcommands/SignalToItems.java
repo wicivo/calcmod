@@ -91,19 +91,19 @@ public class SignalToItems {
         if (item1nextstrength > item1) {
             stackable1 = nf.format(item1);
         }
-        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Items required for 64 stackable: ", "result", "\nItems required for 16 stackable: ", "result", "\nItems required for non-stackable: ", "result"}, new String[] {}, new String[] {CalcCommand.getParsedStack(item64, 64), stackable16, stackable1});
+        CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Для 64 стакабельных предметов необходимо: ", "result", "\nДля 16 стакабельных предметов необходимо: ", "result", "\nДля  нестакабельных предметов необходимо: ", "result"}, new String[] {}, new String[] {CalcCommand.getParsedStack(item64, 64), stackable16, stackable1});
         
         if (strength > 15) {
-            message.addString("\n§cError: Signal Strength out of range (0, 15)");
+            message.addString("\n§cОшибка: Уровень сигнала вне диапазона (0, 15)");
         }
         return message;
        // return new String[] {"Items Required for 64 Stackable: ", CalcCommand.getParsedStack(item64, 64), "\nItems Required for 16 Stackable: ", stackable16, "\nItems Required for Non Stackable: ", stackable1};
     }
 
     public static String helpMessage = """
-        §b§LSignal To Items:§r§f
-           Given a container and a desired comparator signal strength §7§o(can be in expression form)§r§f, returns the number of items needed to achieve that signal strength.
-            §eUsage: /calc signaltoitems <container> <signal>§f
+        §b§LУровень сигнала в кол-во предметов:§r§f
+           При заданном контейнере и уровне сигнала компоратора §7§o(может быть представлено в виде выражения)§r§f, получаем количество предметов, необходимое для достижения этого сигнала.
+            §eИспользование: /calc signaltoitems <container> <signal>§f
                 """;
 
 }
