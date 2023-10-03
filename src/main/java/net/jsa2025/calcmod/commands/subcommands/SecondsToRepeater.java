@@ -58,17 +58,17 @@ public class SecondsToRepeater {
         double ticks = secondsDouble * 10;
         double repeaters = Math.ceil(ticks/4);
         if (ticks % 4 != 0) {
-            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Repeaters required for ", "input", " seconds = ", "result", " \nLast repeater tick = ", "result"}, new String[] {seconds}, new String[] {nf.format(repeaters), nf.format(ticks % 4)});
+            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Кол-во повторителей, необходимое для ", "input", " секунд = ", "result", " \nЗадержка = ", "result"}, new String[] {seconds}, new String[] {nf.format(repeaters), nf.format(ticks % 4)});
             return message;
         } else {
-            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Repeaters required for ", "input", " seconds = ", "result"}, new String[] {seconds}, new String[] {nf.format(repeaters)});
+            CalcMessageBuilder message = new CalcMessageBuilder().addFromArray(new String[] {"Кол-во повторителей, необходимое для ", "input", " секунд = ", "result"}, new String[] {seconds}, new String[] {nf.format(repeaters)});
             return message;
         }
     }
 
     public static String helpMessage = """
-        §b§LSeconds to Repeater:§r§f
-            Given a number of seconds §7§o(can be in expression form)§r§f, returns the number of repeaters and their delay.
-            §eUsage: /calc secondstorepeater <seconds>§f
+        §b§LСекунды в кол-во повторителей:§r§f
+            При заданном количестве секунд §7§o(может быть представлено в виде выражения)§r§f, получаем кол-во повторителей и их задержку.
+            §eИспользование: /calc secondstorepeater <секунды>§f
                 """;
 }
