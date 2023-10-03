@@ -66,13 +66,13 @@ public class Nether {
     public static CalcMessageBuilder execute(BlockPos... pos) {
         BlockPos position;
         position = pos[0];
-        CalcMessageBuilder message = new CalcMessageBuilder().addInput("X: "+nf.format(position.getX())+" Z: "+nf.format(position.getZ())).addString(" §7>>§f Nether = ").addResult("X: "+nf.format(position.getX()/8)+" Z: "+nf.format(position.getZ()/8));
+        CalcMessageBuilder message = new CalcMessageBuilder().addInput("X: "+nf.format(position.getX())+" Z: "+nf.format(position.getZ())).addString(" §7>>§f Нижний мир = ").addResult("X: "+nf.format(position.getX()/8)+" Z: "+nf.format(position.getZ()/8));
         return message;
     }
 
     public static String helpMessage = """
-        §b§LNether:§r§f
-            Given a block position in the Overworld, returns the Nether's corresponding coordinates. If no coordinates are given, command assumes current player position.
-            §eUsage: /calc nether <x> <y> <z>§f
+        §b§LНижний мир:§r§f
+            При заданных координатах в Верхнем мире, получаем соответствующие координаты Нижнем мире. Если координаты не указаны, то команда принимает ваши текущии координаты.
+            §eИспользование: /calc nether <x> <y> <z>§f
                 """;
 }
